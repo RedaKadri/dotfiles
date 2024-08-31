@@ -27,7 +27,25 @@ disabled = false
 style = "bg:#a3aed2 fg:#090c0c"
 
 [os.symbols]
+Windows = "󰍲 "
 Ubuntu = "󰕈 "
+SUSE = " "
+Raspbian = "󰐿 "
+Mint = "󰣭 "
+Macos = " "
+Manjaro = " "
+Linux = "󰌽 "
+Gentoo = "󰣨 "
+Fedora = "󰣛 "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = "󰣇 "
+Artix = "󰣇 "
+CentOS = " "
+Debian = "󰣚 "
+Redhat = "󱄛 "
+RedHatEnterprise = "󱄛 "
 
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
