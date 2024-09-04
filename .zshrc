@@ -60,15 +60,17 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # Aliases
 alias ls='eza --long --icons'
 alias c='clear'
-alias bat='batcat'
 alias lzg='lazygit'
-alias pf="fzf --preview 'batcat --style=numbers --color=always {}'"
+alias pf="fzf --preview 'bat --style=numbers --color=always {}'"
+alias code='vscodium'
 
 # Shell integrations
 # eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 PATH=~/.console-ninja/.bin:$PATH
+
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -80,6 +82,12 @@ export NVM_DIR="$HOME/.nvm"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# java
+export JAVA_HOME=/usr/lib/jvm/java-22-openjdk
+export PATH=$JAVA_HOME/bin:$PATH
+
+
 
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"

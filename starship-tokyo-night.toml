@@ -14,7 +14,8 @@ $golang\
 $php\
 $c\
 [](fg:#212736 bg:#1d2230)\
-$time\
+$docker_context\
+$conda\
 [ ](fg:#1d2230)\
 \n$character"""
 
@@ -50,7 +51,7 @@ RedHatEnterprise = "󱄛 "
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
 format = "[ $path ]($style)"
-truncation_length = 3
+truncation_length = 2
 truncation_symbol = "…/"
 
 [directory.substitutions]
@@ -58,6 +59,7 @@ truncation_symbol = "…/"
 "Downloads" = " "
 "Music" = " "
 "Pictures" = " "
+"www" = "󰲋 "
 
 [git_branch]
 symbol = ""
@@ -93,11 +95,14 @@ symbol = " "
 style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#1d2230"
-format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+[docker_context]
+symbol = " "
+style = "bg:color_bg3"
+format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
+
+[conda]
+style = "bg:color_bg3"
+format = '[[ $symbol( $environment) ](fg:#83a598 bg:color_bg3)]($style)'
 
 [character]
 disabled = false
