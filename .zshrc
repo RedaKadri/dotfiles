@@ -62,31 +62,11 @@ alias ls='eza --long --icons'
 alias c='clear'
 alias lzg='lazygit'
 alias pf="fzf --preview 'bat --style=numbers --color=always {}'"
-alias code='vscodium'
+alias n='nvim'
 
 # Shell integrations
 # eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-
-PATH=~/.console-ninja/.bin:$PATH
-
-
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# bun completions
-[ -s "/home/reda/.bun/_bun" ] && source "/home/reda/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# java
-export JAVA_HOME=/usr/lib/jvm/java-22-openjdk
-export PATH=$JAVA_HOME/bin:$PATH
-
 
 
 function yy() {

@@ -7,46 +7,46 @@ command_timeout = 1000
 
 [git_branch]
 symbol = ""
-format = '[[ $symbol $branch ](fg:#ff9e64)]($style)'
+format = '[[ $symbol $branch ](fg:#ebcb8b)]($style)'
 
 [git_status]
-format = '[[($all_status$ahead_behind )](fg:#ff9e64)]($style)'
+format = '[[($all_status$ahead_behind )](fg:#ebcb8b)]($style)'
 
 [nodejs]
 symbol = ""
-format = '[[ $symbol ($version) ](fg:#769ff0)]($style)'
+format = '[[ $symbol ($version) ](fg:#d8dee9)]($style)'
 
 [bun]
 symbol = "B"
-format = '[[ $symbol ($version) ](fg:#769ff0)]($style)'
+format = '[[ $symbol ($version) ](fg:#d8dee9)]($style)'
 
 [java]
 symbol = " "
-format = '[[ $symbol ($version) ](fg:#769ff0)]($style)'
+format = '[[ $symbol ($version) ](fg:#d8dee9)]($style)'
 
 [rust]
 symbol = ""
-format = '[[ $symbol ($version) ](fg:#769ff0)]($style)'
+format = '[[ $symbol ($version) ](fg:#d8dee9)]($style)'
 
 [golang]
 symbol = ""
-format = '[[ $symbol ($version) ](fg:#769ff0)]($style)'
+format = '[[ $symbol ($version) ](fg:#d8dee9)]($style)'
 
 [php]
 symbol = ""
-format = '[[ $symbol ($version) ](fg:#769ff0)]($style)'
+format = '[[ $symbol ($version) ](fg:#d8dee9)]($style)'
 
 [c]
 symbol = " "
-format = '[[ $symbol ($version) ](fg:#769ff0)]($style)'
+format = '[[ $symbol ($version) ](fg:#d8dee9)]($style)'
 
 [lua]
 symbol = " "
-format = '[[ $symbol ($version) ](fg:#769ff0)]($style)'
+format = '[[ $symbol ($version) ](fg:#d8dee9)]($style)'
 
 [python]
 symbol = " "
-format = '[[ $symbol ($version) ](fg:#769ff0)]($style)'
+format = '[[ $symbol ($version) ](fg:#d8dee9)]($style)'
 
 [docker_context]
 symbol = " "
@@ -54,9 +54,9 @@ format = '[[ $symbol( $context) ](fg:#c3e88d)]($style)'
 
 [character]
 disabled = false
-success_symbol = '[](bold fg:#4fd6be)'
-error_symbol = '[](bold fg:#c53b53)'
-vimcmd_symbol = '[](bold fg:#4fd6be)'
-vimcmd_replace_one_symbol = '[](bold fg:#9d7cd8)'
-vimcmd_replace_symbol = '[](bold fg:#9d7cd8)'
+success_symbol = '[](bold fg:#a3be8c)'
+error_symbol = '[](bold fg:#bf616a)'
+vimcmd_symbol = '[](bold fg:#a3be8c)'
+vimcmd_replace_one_symbol = '[](bold fg:#b48ead)'
+vimcmd_replace_symbol = '[](bold fg:#b48ead)'
 vimcmd_visual_symbol = '[](bold fg:#ffc777)'
