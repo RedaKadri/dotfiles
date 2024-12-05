@@ -1,0 +1,131 @@
+* {
+  border: none;
+  font-size: 14px;
+  font-family: "JetBrainsMono Nerd Font,JetBrainsMono NF";
+  min-height: 20px;
+}
+
+window#waybar {
+  background: transparent;
+  color: #c8c093;
+}
+
+#custom-logo {
+  color: #c5c9c5;
+}
+
+.modules-right {
+  padding: 0 10px;
+  border-radius: 15px 0 0 15px;
+  margin-top: 2px;
+  background: #1f1f28;
+}
+
+.modules-center {
+  padding: 0 15px;
+  margin-top: 2px;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #1f1f28;
+}
+
+.modules-left {
+  border-radius: 0 15px 15px 0;
+  padding: 0 10px;
+  margin-top: 2px;
+  background: #1f1f28;
+}
+
+#battery,
+#custom-clipboard,
+#custom-colorpicker,
+#custom-powerDraw,
+#bluetooth,
+#pulseaudio,
+#network,
+#disk,
+#memory,
+#backlight,
+#cpu,
+#temperature,
+#custom-weather,
+#idle_inhibitor,
+#jack,
+#tray,
+#window,
+#clock {
+  padding: 0 5px;
+}
+#pulseaudio {
+  padding-top: 3px;
+}
+
+#workspaces button {
+  margin: 0px 10px;
+  color: #a6a69c;
+}
+
+#workspaces button.visible {
+  color: white;
+}
+
+#workspaces button:hover {
+  background: transparent;
+  box-shadow: none;
+  color: white;
+}
+
+#workspaces button.urgent {
+  color: #e46876;
+}
+
+#temperature.critical,
+#pulseaudio.muted {
+  color: #e46876;
+}
+
+#clock {
+  color: #72a7bc;
+}
+
+#backlight-slider trough,
+#pulseaudio-slider trough {
+  margin-top: -3px;
+  min-width: 90px;
+  min-height: 10px;
+  margin-bottom: -4px;
+  border-radius: 8px;
+  background: #a6a69c;
+}
+
+#backlight-slider highlight,
+#pulseaudio-slider highlight {
+  border-radius: 8px;
+  background-color: #2d4f67;
+}
+
+#battery.charging {
+  color: #87a987;
+  background-color: transparent;
+}
+
+#battery.warning:not(.charging) {
+  background-color: transparent;
+  color: #e6c384;
+}
+
+#battery.critical:not(.charging) {
+  background-color: transparent;
+  color: #e46876;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}

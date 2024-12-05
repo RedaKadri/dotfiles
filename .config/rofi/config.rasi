@@ -1,0 +1,7 @@
+configuration {
+  modes: [ combi ];
+  combi-modes: [ window, drun, run ];
+}
+
+
+@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"

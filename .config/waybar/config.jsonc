@@ -1,0 +1,280 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": [
+    "custom/logo",
+    "clock",
+    "disk",
+    "memory",
+    "cpu",
+    "temperature",
+  ],
+  "modules-center": [
+    "hyprland/workspaces",
+  ],
+  "modules-right": [
+    "hyprland/window",
+    "custom/clipboard",
+    "group/blight",
+    "idle_inhibitor",
+    "bluetooth",
+    "group/audio",
+    "group/networking",
+    "battery"
+  ],
+  "reload_style_on_change": true,
+
+  "custom/logo": {
+    "format": "<span font='20px'>  </span>",
+    "tooltip": false,
+    // "on-click": "~/.config/rofi/scripts/powermenu.sh"
+  },
+
+  "clock": {
+    "format": "{:%I:%M:%S %p}",
+    "interval": 1,
+    "tooltip-format": "\n<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "calendar-weeks-pos": "right",
+    "today-format": "<span color='#7645AD'><b><u>{}</u></b></span>",
+    "format-calendar": "<span color='#aeaeae'><b>{}</b></span>",
+    "format-calendar-weeks": "<span color='#aeaeae'><b>W{:%V}</b></span>",
+    "format-calendar-weekdays": "<span color='#aeaeae'><b>{}</b></span>"
+  },
+
+  "disk": {
+    "interval": 30,
+    "format": " {percentage_used}%",
+    "path": "/"
+  },
+
+  "memory": {
+    "format": " {percentage}%"
+  },
+
+  "cpu": {
+    "interval": 1,
+    "format": " {usage}%",
+    "format-icons": [
+      "▁",
+      "▂",
+      "▃",
+      "▄",
+      "▅",
+      "▆",
+      "▇",
+      "█"
+    ],
+  },
+
+  "temperature": {
+    "format": " {temperatureC}°C",
+    "format-critical": " {temperatureC}°C",
+    "interval": 1,
+    "critical-threshold": 80,
+  },
+
+  "hyprland/workspaces": {
+    "format": "<span font='18px'>{icon}</span>",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": " ",
+      "4": "󱝿",
+      "5": "",
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "*": [
+        1,
+        2,
+        3,
+        4,
+        5,
+      ]
+    }
+  },
+
+  "hyprland/window": {
+    "format": "( {class} )",
+  },
+
+  "custom/clipboard": {
+    // "exec": "echo '󰅍'",
+    "interval": 5,
+    "tooltip": true,
+    // "tooltip-format": "{output}",
+    // "exec-tooltip": "sh -c cliphist list | head -n 5",
+    "on-click": "sh -c 'cliphist list | rofi -dmenu | cliphist decode | wl-copy'"
+  },
+
+  "group/blight": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "backlight",
+      "backlight/slider"
+    ]
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "<span font='12'>{icon}</span>",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+    ],
+    "on-scroll-down": "light -U 10",
+    "on-scroll-up": "light -A 10",
+    "smooth-scrolling-threshold": 1
+  },
+  "backlight/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal",
+    "device": "intel_backlight"
+  },
+
+  "idle_inhibitor": {
+    "format": "<span font='12'>{icon}</span>",
+    "format-icons": {
+      "activated": "󰅶 ",
+      "deactivated": "󰾪 ",
+    }
+  },
+
+  "bluetooth": {
+    "format-on": "󰂰 ",
+    "format-off": "󰂲 ",
+    "format-disabled": "󰂲 ",
+    "format-connected": "󰂴 ",
+    "format-connected-battery": "{device_battery_percentage}% 󰂴",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "on-click": "sh ~/.config/rofi/scripts/bluetooth",
+  },
+
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-bluetooth": "󰂰 ",
+    "format-muted": " ",
+    "tooltip-format": "{volume}% {icon}",
+    "format-icons": {
+      "headphones": " ",
+      "bluetooth": "󰥰 ",
+      "handsfree": " ",
+      "headset": "󱡬 ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": [
+        "🕨 ",
+        "🕩 ",
+        "🕪 "
+      ]
+    },
+    "scroll-step": 5,
+    "justify": "center",
+    "on-click": "amixer sset Master toggle",
+    "on-click-right": "pavucontrol",
+    "tooltip-format": "{volume}%  {icon}",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+  },
+  "pulseaudio#mic": {
+    "format": "{format_source}",
+    "format-source": " ",
+    "format-source-muted": " ",
+    "tooltip-format": "{volume}% {format_source} ",
+    "on-click": "pactl set-source-mute 0 toggle",
+    "on-scroll-down": "pactl set-source-volume 0 -1%",
+    "on-scroll-up": "pactl set-source-volume 0 +1%"
+  },
+  "group/audio": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "pulseaudio",
+      "pulseaudio#mic",
+      "pulseaudio/slider"
+    ]
+  },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 140,
+    "orientation": "horizontal"
+  },
+
+  "network": {
+    "format-wifi": " ",
+    "format-ethernet": "󰈀 ",
+    "format-disconnected": "󱐅 ",
+    "tooltip-format-disconnected": "Disconnected",
+    "tooltip-format": "{ipaddr}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)  | {ipaddr}",
+    "tooltip-format-ethernet": "{ifname} 🖧 | {ipaddr}",
+    "tooltip-format-ethernet": "{bandwidthTotalBytes}",
+    "on-click": "sh ~/.config/rofi/scripts/wifi"
+  },
+  "network#speed": {
+    "format": "{bandwidthDownBits}",
+    "interval": 1,
+    "tooltip-format": "{ipaddr}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)   \n{ipaddr} | {frequency} MHz{icon} ",
+    "tooltip-format-ethernet": "{ifname} 󰈀 \n{ipaddr} | {frequency} MHz{icon} ",
+    "tooltip-format-disconnected": "Not Connected to any type of Network",
+    "tooltip": true,
+  },
+  "group/networking": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "network",
+      "network#speed"
+    ]
+  },
+
+  "battery": {
+    "interval": 1,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "tooltip": true,
+    "format": " {capacity}% <span font='16px'>{icon}</span>",
+    "format-time": "{H}h {M}min",
+    "tooltip": "{time}",
+    "format-charging": " {capacity}% <span font='16px'>{icon}</span>",
+    "format-plugged": " {capacity}% 󰠠 ",
+    // "format-alt": "{time} {icon}",
+    "format-icons": [
+      "󰪞 ",
+      "󰪟 ",
+      "󰪠 ",
+      "󰪡 ",
+      "󰪢 ",
+      "󰪣 ",
+      "󰪤 ",
+      "󰪥 "
+    ],
+  },
+
+}

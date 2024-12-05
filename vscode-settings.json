@@ -1,0 +1,59 @@
+{
+  "workbench.startupEditor": "none",
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.minimap.enabled": false,
+  "git.autofetch": true,
+  "git.openRepositoryInParentFolders": "always",
+  "window.titleBarStyle": "custom",
+  "workbench.sideBar.location": "right",
+  "window.customTitleBarVisibility": "auto",
+  "workbench.activityBar.location": "top",
+  "workbench.layoutControl.enabled": false,
+  "window.menuBarVisibility": "toggle",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.fontSize": 16,
+  "window.zoomLevel": 1,
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.lineNumbers": "relative",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "vim.leader": "<Space>",
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // splits
+    {
+      "before": ["leader", "v"],
+      "commands": [":vsplit"]
+    },
+    {
+      "before": ["leader", "c", "s"],
+      "commands": [":nohl"]
+    }
+  ],
+  "editor.cursorBlinking": "expand",
+  "cSpell.userWords": [
+    "autofetch",
+    "catppuccin",
+    "esbenp",
+    "Fantasque",
+    "Fira",
+    "hlsearch",
+    "iconify",
+    "Kanagawa",
+    "Lilex",
+    "Mantype",
+    "Nuxt",
+    "nuxtjs",
+    "pinia",
+    "vsplit",
+    "vueuse"
+  ],
+  "workbench.colorTheme": "Kanagawa",
+  "workbench.colorCustomizations": {
+    "[Kanagawa]": {
+      "sideBarSectionHeader.background": "#1f1f28",
+      "titleBar.activeBackground": "#1f1f28"
+    }
+  }
+}

@@ -27,6 +27,7 @@ zinit snippet OMZP::aws
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
+zinit snippet OMZP::docker
 
 # Load completions
 autoload -Uz compinit && compinit
@@ -67,6 +68,4 @@ alias n='nvim'
 # Shell integrations
 # eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-
-
 
