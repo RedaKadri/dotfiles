@@ -32,23 +32,6 @@
     }
   ],
   "editor.cursorBlinking": "expand",
-  "cSpell.userWords": [
-    "autofetch",
-    "catppuccin",
-    "esbenp",
-    "Fantasque",
-    "Fira",
-    "hlsearch",
-    "iconify",
-    "Kanagawa",
-    "Lilex",
-    "Mantype",
-    "Nuxt",
-    "nuxtjs",
-    "pinia",
-    "vsplit",
-    "vueuse"
-  ],
   "workbench.colorTheme": "Kanagawa",
   "workbench.colorCustomizations": {
     "[Kanagawa]": {
