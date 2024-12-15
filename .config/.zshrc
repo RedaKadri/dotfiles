@@ -14,6 +14,10 @@ source "${ZINIT_HOME}/zinit.zsh"
 # Add in StarShip
 eval "$(starship init zsh)"
 
+# Shell integrations
+# eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
+
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -65,7 +69,21 @@ alias lzg='lazygit'
 alias pf="fzf --preview 'bat --style=numbers --color=always {}'"
 alias n='nvim'
 
-# Shell integrations
-# eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+
+kitty-reload() {
+    kill -SIGUSR1 $(pidof kitty)
+}
+
+kitty-transparency() {
+    echo "Do you want to enable transparent background? (y/n, default: y): "
+    read -r transparency
+
+    transparency="${transparency:-y}"
+
+    if [[ "$transparency" =~ ^[Yy]$ ]]; then
+        kitten @ set-background-opacity 0.9
+    else
+        kitten @ set-background-opacity 1
+    fi
+}
 
