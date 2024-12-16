@@ -27,7 +27,7 @@
   "custom/logo": {
     "format": "<span font='20px'>  </span>",
     "tooltip": false,
-    // "on-click": "~/.config/rofi/scripts/powermenu.sh"
+    "on-click": "swaync-client -t"
   },
 
   "clock": {
