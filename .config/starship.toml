@@ -56,9 +56,13 @@ format = '[[ $symbol( $context) ](fg:#98BB6C)]($style)'
 disabled = false
 success_symbol = '[ ](bold fg:#DDD8BB)'
 error_symbol = '[ ](bold fg:#e82424)'
+vimcmd_symbol = '[ ](bold fg:#c8c093)'
+vimcmd_replace_one_symbol = '[ ](bold fg:#658594)'
+vimcmd_replace_symbol = '[ ](bold fg:#658594)'
+vimcmd_visual_symbol = '[ ](bold fg:#938aa9)'
+
 
 [directory]
 format = "[$path ](bold fg:#F1C982)"
 truncation_length = 1
-
 

@@ -76,7 +76,7 @@
   "hyprland/workspaces": {
     "format": "<span font='18px'>{icon}</span>",
     "format-icons": {
-      "1": "",
+      "1": "",
       "2": "",
       "3": " ",
       "4": "󱝿",
