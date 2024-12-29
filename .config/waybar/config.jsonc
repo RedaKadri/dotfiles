@@ -14,9 +14,9 @@
   ],
   "modules-right": [
     "hyprland/window",
-    "custom/clipboard",
     "group/blight",
     "idle_inhibitor",
+    "custom/clipboard",
     "bluetooth",
     "group/audio",
     "group/networking",
@@ -99,12 +99,9 @@
   },
 
   "custom/clipboard": {
-    // "exec": "echo '󰅍'",
-    "interval": 5,
-    "tooltip": true,
-    // "tooltip-format": "{output}",
-    // "exec-tooltip": "sh -c cliphist list | head -n 5",
-    "on-click": "sh -c 'cliphist list | rofi -dmenu | cliphist decode | wl-copy'"
+    "format": "<span font='12'> </span>",
+    "tooltip": false,
+    "on-click": "clipman pick -t rofi"
   },
 
   "group/blight": {
@@ -153,10 +150,10 @@
   },
 
   "bluetooth": {
-    "format-on": "󰂰 ",
-    "format-off": "󰂲 ",
-    "format-disabled": "󰂲 ",
-    "format-connected": "󰂴 ",
+    "format-on": "<span font='12'>󰂰 </span>",
+    "format-off": "<span font='12'>󰂲 </span>",
+    "format-disabled": "<span font='12'>󰂲 </span>",
+    "format-connected": "<span font='12'>󰂴 </span>",
     "format-connected-battery": "{device_battery_percentage}% 󰂴",
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
@@ -166,7 +163,7 @@
   },
 
   "pulseaudio": {
-    "format": "{icon}",
+    "format": "<span font='12'>{icon}</span>",
     "format-bluetooth": "󰂰 ",
     "format-muted": " ",
     "tooltip-format": "{volume}% {icon}",
@@ -220,9 +217,9 @@
   },
 
   "network": {
-    "format-wifi": " ",
-    "format-ethernet": "󰈀 ",
-    "format-disconnected": "󱐅 ",
+    "format-wifi": "<span font='12'> </span>",
+    "format-ethernet": "<span font='12'>󰈀 </span>",
+    "format-disconnected": "<span font='12'>󱐅 </span>",
     "tooltip-format-disconnected": "Disconnected",
     "tooltip-format": "{ipaddr}",
     "tooltip-format-wifi": "{essid} ({signalStrength}%)  | {ipaddr}",
