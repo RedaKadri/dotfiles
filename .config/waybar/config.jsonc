@@ -54,16 +54,6 @@
   "cpu": {
     "interval": 1,
     "format": " {usage}%",
-    "format-icons": [
-      "▁",
-      "▂",
-      "▃",
-      "▄",
-      "▅",
-      "▆",
-      "▇",
-      "█"
-    ],
   },
 
   "temperature": {
@@ -81,7 +71,6 @@
       "3": " ",
       "4": "󱝿",
       "5": "",
-      "default": ""
     },
     "persistent-workspaces": {
       "*": [
@@ -99,7 +88,7 @@
   },
 
   "custom/clipboard": {
-    "format": "<span font='12'> </span>",
+    "format": "<span font='11'> </span>",
     "tooltip": false,
     "on-click": "clipman pick -t rofi"
   },
@@ -163,7 +152,7 @@
   },
 
   "pulseaudio": {
-    "format": "<span font='12'>{icon}</span>",
+    "format": "<span font='11'>{icon}</span>",
     "format-bluetooth": "󰂰 ",
     "format-muted": " ",
     "tooltip-format": "{volume}% {icon}",
@@ -217,9 +206,9 @@
   },
 
   "network": {
-    "format-wifi": "<span font='12'> </span>",
-    "format-ethernet": "<span font='12'>󰈀 </span>",
-    "format-disconnected": "<span font='12'>󱐅 </span>",
+    "format-wifi": "<span font='11'> </span>",
+    "format-ethernet": "<span font='11'>󰈀 </span>",
+    "format-disconnected": "<span font='11'>󱐅 </span>",
     "tooltip-format-disconnected": "Disconnected",
     "tooltip-format": "{ipaddr}",
     "tooltip-format-wifi": "{essid} ({signalStrength}%)  | {ipaddr}",
