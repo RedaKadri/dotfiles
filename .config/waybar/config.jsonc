@@ -31,14 +31,10 @@
   },
 
   "clock": {
-    "format": "{:%I:%M:%S %p}",
-    "interval": 1,
-    "tooltip-format": "\n<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%I:%M %p}",
+    "tooltip": true,
+    "tooltip-format": "<small>{:%D}</small>",
     "calendar-weeks-pos": "right",
-    "today-format": "<span color='#7645AD'><b><u>{}</u></b></span>",
-    "format-calendar": "<span color='#aeaeae'><b>{}</b></span>",
-    "format-calendar-weeks": "<span color='#aeaeae'><b>W{:%V}</b></span>",
-    "format-calendar-weekdays": "<span color='#aeaeae'><b>{}</b></span>"
   },
 
   "disk": {
@@ -250,7 +246,6 @@
     "tooltip": "{time}",
     "format-charging": " {capacity}% <span font='16px'>{icon}</span>",
     "format-plugged": " {capacity}% 󰠠 ",
-    // "format-alt": "{time} {icon}",
     "format-icons": [
       "󰪞 ",
       "󰪟 ",

@@ -2,7 +2,7 @@
   border: none;
   font-size: 14px;
   font-family: "JetBrainsMono Nerd Font,JetBrainsMono NF";
-  min-height: 20px;
+  min-height: 18px;
 }
 
 window#waybar {
@@ -16,7 +16,7 @@ window#waybar {
 
 .modules-right {
   padding: 0 10px;
-  border-radius: 15px 0 0 15px;
+  border-radius: 10px 0 0 10px;
   margin-top: 2px;
   background: #1f1f28;
 }
@@ -24,12 +24,12 @@ window#waybar {
 .modules-center {
   padding: 0 15px;
   margin-top: 2px;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 10px 10px 10px 10px;
   background-color: #1f1f28;
 }
 
 .modules-left {
-  border-radius: 0 15px 15px 0;
+  border-radius: 0 10px 10px 0;
   padding: 0 10px;
   margin-top: 2px;
   background: #1f1f28;
@@ -55,8 +55,9 @@ window#waybar {
 #clock {
   padding: 0 5px;
 }
+
 #pulseaudio {
-  padding-top: 3px;
+  padding-top: 6px;
 }
 
 #workspaces button {
@@ -80,6 +81,7 @@ window#waybar {
 
 #temperature.critical,
 #pulseaudio.muted {
+  padding-top: 3px;
   color: #e46876;
 }
 
