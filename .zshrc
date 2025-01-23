@@ -75,10 +75,10 @@ kitty-reload() {
 }
 
 kitty-transparency() {
-    echo "Do you want to enable transparent background? (y/n, default: y): "
+    echo "Do you want to enable transparent background? (y/n, default: n): "
     read -r transparency
 
-    transparency="${transparency:-y}"
+    transparency="${transparency:-n}"
 
     if [[ "$transparency" =~ ^[Yy]$ ]]; then
         kitten @ set-background-opacity 0.9

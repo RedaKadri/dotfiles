@@ -86,7 +86,7 @@
   "custom/clipboard": {
     "format": "<span font='11'> </span>",
     "tooltip": false,
-    "on-click": "clipman pick -t rofi"
+    "on-click": "clipman pick -t rofi --err-on-no-selection"
   },
 
   "group/blight": {
