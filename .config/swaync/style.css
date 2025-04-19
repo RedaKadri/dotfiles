@@ -1,12 +1,11 @@
-@define-color cc-bg #1f1f28;
-@define-color noti-border-color #1f1f28;
-@define-color noti-bg #1f1f28;
-@define-color noti-bg-darker #1f1f28;
-@define-color noti-bg-hover #16161d;
-@define-color noti-bg-focus #16161d;
-@define-color text-color #dcd7ba;
-@define-color text-color-disabled #c8c093;
-@define-color bg-selected #2d4f67;
+@define-color cc-bg #2e3440;
+@define-color noti-border-color #2e3440;
+@define-color noti-bg #2e3440;
+@define-color noti-bg-darker #2e3440;
+@define-color noti-bg-hover #3b4252;
+@define-color noti-bg-focus #3b4252;
+@define-color text-color #d8dee9;
+@define-color text-color-disabled #e5e9f0;
 
 * {
   font-family: JetBrainsMono NFP;
@@ -35,12 +34,12 @@
   background: @cc-bg;
   padding: 7px;
   border-radius: 10px;
-  border: 2px solid #c8c093;
+  border: 2px solid #e5e9f0;
   margin: 0;
 }
 
 .close-button {
-  background: #7e9cd8;
+  background: #88c0d0;
   color: @cc-bg;
   text-shadow: none;
   padding: 0;
@@ -51,45 +50,45 @@
 
 .close-button:hover {
   box-shadow: none;
-  background: #7fb4ca;
+  background: #81a1c1;
   transition: all 0.15s ease-in-out;
   border: none;
 }
 
 .notification-action {
-  color: #dcd7ba;
-  border: 2px solid #c8c093;
+  color: #d8dee9;
+  border: 2px solid #e5e9f0;
   border-top: none;
   border-radius: 10px;
-  background: #16161d;
+  background: #3b4252;
 }
 
 .notification-default-action:hover,
 .notification-action:hover {
-  color: #dcd7ba;
-  background: #16161d;
+  color: #d8dee9;
+  background: #3b4252;
 }
 
 .summary {
   padding-top: 7px;
   font-size: 13px;
-  color: #dcd7ba;
+  color: #d8dee9;
 }
 
 .time {
   font-size: 11px;
-  color: #7e9cd8;
+  color: #88c0d0;
   margin-right: 24px;
 }
 
 .body {
   font-size: 12px;
-  color: #dcd7ba;
+  color: #d8dee9;
 }
 
 .control-center {
   background: @cc-bg;
-  border: 2px solid #c8c093;
+  border: 2px solid #e5e9f0;
   border-radius: 10px;
 }
 
@@ -110,7 +109,7 @@
 }
 
 .widget-title {
-  color: #c8c093;
+  color: #e5e9f0;
   background: @noti-bg-darker;
   padding: 5px 10px;
   margin: 10px 10px 5px 10px;
@@ -128,7 +127,7 @@
 }
 
 .widget-title > button:hover {
-  background: #7e9cd8;
+  background: #88c0d0;
   color: @cc-bg;
 }
 
@@ -138,17 +137,17 @@
   margin: 5px 10px 10px 10px;
   border-radius: 15px;
   font-size: large;
-  color: #f2e5bc;
+  color: #e5e9f0;
 }
 
 .widget-dnd > switch {
   border-radius: 15px;
-  background: #16161d;
+  background: #3b4252;
 }
 
 .widget-dnd > switch:checked {
-  background: #7e9cd8;
-  border: 1px solid #7e9cd8;
+  background: #88c0d0;
+  border: 1px solid #88c0d0;
 }
 
 .widget-dnd > switch slider {
@@ -212,7 +211,7 @@
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
-  background: #7e9cd8;
+  background: #88c0d0;
   color: @cc-bg;
 }
 

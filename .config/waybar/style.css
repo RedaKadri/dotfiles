@@ -2,37 +2,43 @@
   border: none;
   font-size: 14px;
   font-family: "JetBrainsMono Nerd Font,JetBrainsMono NF";
-  min-height: 18px;
+  min-height: 15px;
 }
 
 window#waybar {
   background: transparent;
-  color: #c8c093;
+  color: #d8dee9;
 }
 
 #custom-logo {
-  color: #c5c9c5;
+  color: #e5e9f0;
 }
 
 .modules-right {
+  background: #2e3440;
   padding: 0 10px;
-  border-radius: 10px 0 0 10px;
-  margin-top: 2px;
-  background: #1f1f28;
+  margin: 4px;
+  margin-bottom: 0;
+  border: 1px solid #434c5e;
+  border-radius: 10px;
 }
 
 .modules-center {
-  padding: 0 15px;
-  margin-top: 2px;
-  border-radius: 10px 10px 10px 10px;
-  background-color: #1f1f28;
+  background-color: #2e3440;
+  padding: 0 10px;
+  margin: 4px;
+  margin-bottom: 0;
+  border: 1px solid #434c5e;
+  border-radius: 10px;
 }
 
 .modules-left {
-  border-radius: 0 10px 10px 0;
+  background: #2e3440;
   padding: 0 10px;
-  margin-top: 2px;
-  background: #1f1f28;
+  margin: 4px;
+  margin-bottom: 0;
+  border: 1px solid #434c5e;
+  border-radius: 10px;
 }
 
 #battery,
@@ -76,17 +82,17 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-  color: #e46876;
+  color: #bf616a;
 }
 
 #temperature.critical,
 #pulseaudio.muted {
   padding-top: 3px;
-  color: #e46876;
+  color: #bf616a;
 }
 
 #clock {
-  color: #72a7bc;
+  color: #81a1c1;
 }
 
 #backlight-slider trough,
@@ -102,22 +108,22 @@ window#waybar {
 #backlight-slider highlight,
 #pulseaudio-slider highlight {
   border-radius: 8px;
-  background-color: #2d4f67;
+  background-color: #88c0d0;
 }
 
 #battery.charging {
-  color: #87a987;
+  color: #a3be8c;
   background-color: transparent;
 }
 
 #battery.warning:not(.charging) {
   background-color: transparent;
-  color: #e6c384;
+  color: #ebcb8b;
 }
 
 #battery.critical:not(.charging) {
   background-color: transparent;
-  color: #e46876;
+  color: #bf616a;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;

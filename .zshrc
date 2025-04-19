@@ -66,6 +66,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='eza --long --icons'
 alias c='clear'
 alias lzg='lazygit'
+alias lzd='go run $HOME/www/lazydocker/main.go'
 alias pf="fzf --preview 'bat --style=numbers --color=always {}'"
 alias n='nvim'
 
@@ -87,3 +88,20 @@ kitty-transparency() {
     fi
 }
 
+
+# bun completions
+[ -s "/home/reda/.bun/_bun" ] && source "/home/reda/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/home/reda/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH="/home/reda/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/reda/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"

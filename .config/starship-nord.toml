@@ -1,0 +1,64 @@
+add_newline = false
+# A minimal left prompt
+format = """$character$directory"""
+# move the rest of the prompt to the right
+right_format = """$all"""
+command_timeout = 1000
+
+[git_branch]
+symbol = " "
+format = '[[ $symbol $branch ](fg:#b48ead)]($style)'
+
+[git_status]
+format = '[[($all_status$ahead_behind )](fg:#b48ead)]($style)'
+
+[nodejs]
+symbol = " "
+format = '[[ $symbol ($version) ](fg:#88c0d0)]($style)'
+
+[bun]
+symbol = " "
+format = '[[ $symbol ($version) ](fg:#88c0d0)]($style)'
+
+[java]
+symbol = " "
+format = '[[ $symbol ($version) ](fg:#88c0d0)]($style)'
+
+[rust]
+symbol = " "
+format = '[[ $symbol ($version) ](fg:#88c0d0)]($style)'
+
+[golang]
+symbol = " "
+format = '[[ $symbol ($version) ](fg:#88c0d0)]($style)'
+
+[php]
+symbol = " "
+format = '[[ $symbol ($version) ](fg:#88c0d0)]($style)'
+
+[c]
+symbol = " "
+format = '[[ $symbol ($version) ](fg:#88c0d0)]($style)'
+
+[lua]
+symbol = " "
+format = '[[ $symbol ($version) ](fg:#88c0d0)]($style)'
+
+[python]
+symbol = " "
+format = '[[ $symbol ($version) ](fg:#88c0d0)]($style)'
+
+[docker_context]
+symbol = " "
+format = '[[ $symbol( $context) ](fg:#a3be8c)]($style)'
+
+[character]
+disabled = false
+success_symbol = '[ ](bold fg:#d8dee9)'
+error_symbol = '[ ](bold fg:#bf616a)'
+
+
+[directory]
+format = "[$path ](bold fg:#81a1c1)"
+truncation_length = 1
+

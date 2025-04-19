@@ -12,12 +12,10 @@
   "window.menuBarVisibility": "toggle",
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
-  "editor.fontSize": 16,
-  "window.zoomLevel": 1,
+  "editor.fontSize": 14,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontLigatures": true,
   "editor.lineNumbers": "relative",
-  "workbench.iconTheme": "catppuccin-mocha",
   "vim.leader": "<Space>",
   "vim.hlsearch": true,
   "vim.normalModeKeyBindingsNonRecursive": [
@@ -32,11 +30,51 @@
     }
   ],
   "editor.cursorBlinking": "expand",
-  "workbench.colorTheme": "Kanagawa",
+  "cSpell.userWords": [
+    "autofetch",
+    "catppuccin",
+    "chartjs",
+    "esbenp",
+    "Fantasque",
+    "Fira",
+    "hlsearch",
+    "iconify",
+    "Kanagawa",
+    "libsql",
+    "Mantype",
+    "Nuxt",
+    "nuxtjs",
+    "pinia",
+    "vsplit",
+    "vueuse",
+    "zenfit"
+  ],
   "workbench.colorCustomizations": {
     "[Kanagawa]": {
       "sideBarSectionHeader.background": "#1f1f28",
-      "titleBar.activeBackground": "#1f1f28"
+      "titleBar.activeBackground": "#1f1f28",
+      "editorGroupHeader.tabsBackground": "#1f1f28",
+      "statusBar.background": "#1f1f28"
     }
-  }
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "chat.commandCenter.enabled": false,
+  "editor.cursorStyle": "underline",
+  "window.zoomLevel": 1,
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.linkedEditing": true,
+  "workbench.iconTheme": "catppuccin-mocha",
+  "explorer.compactFolders": false,
+  "editor.formatOnSave": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.autoSave": "afterDelay",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Nord Flat Italic"
 }
