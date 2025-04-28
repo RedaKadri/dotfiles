@@ -6,7 +6,6 @@ if [ ! -d "$ZINIT_HOME" ]; then
    mkdir -p "$(dirname $ZINIT_HOME)"
    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
-
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
@@ -87,6 +86,17 @@ kitty-transparency() {
         kitten @ set-background-opacity 1
     fi
 }
+
+
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(bat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 
 
 # bun completions
